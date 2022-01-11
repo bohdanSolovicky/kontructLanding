@@ -16,6 +16,7 @@
   url('../fonts/open-sans-v27-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/open-sans-v27-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+/*Cover block*/
 .cover {
   align-items: center;
   background: url("../img/coverBackground.jpg");
@@ -26,7 +27,7 @@
   flex-direction: column;
   justify-content: space-between;
   margin: auto;
-  min-height: 100vh;
+  height: 100vh;
   min-width: 1440px;
   padding-bottom: 70px;
   padding-top: 40px;
@@ -76,4 +77,53 @@
   letter-spacing: 3.7px;
   line-height: 13px;
   text-transform: uppercase;
+}
+
+/*Header block*/
+.header {
+  border-bottom: 1px solid #E6E6E6;
+  width:100%;
+}
+
+.header-wrap {
+  max-width: 1440px;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.header__logo {
+  display: block;
+  width: 80px;
+}
+
+.header-nav__list {
+  list-style: none;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+}
+
+.header-list__item {
+  margin-left: 42px;
+}
+
+.header-link__item {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans";
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  color: #48555B;
+}
+
+.header-link__item:hover {
+  color: #00A4E5;
 }
