@@ -21,7 +21,7 @@
   align-items: center;
   background: url("../img/coverBackground.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover; /*contain не заливает всю высоту*/
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
