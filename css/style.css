@@ -16,23 +16,41 @@
   url('../fonts/open-sans-v27-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/open-sans-v27-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+/*Config block*/
+.config-text {
+  font-family: "Open Sans";
+  color: #48555B;
+}
+
+.body-width {
+  width: 100vw;
+}
+
+.base-width {
+  min-width: 1440px;
+  width: 1440px;
+  margin: auto;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
 /*Cover block*/
 .cover {
   align-items: center;
   background: url("../img/coverBackground.jpg");
   background-repeat: no-repeat;
   background-size: cover; /*contain не заливает всю высоту*/
+  background-position: center;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
   margin: auto;
-  min-width: 1440px;
+  /*min-width: 1440px;*/
   padding-bottom: 70px;
   padding-top: 40px;
   position: relative;
-  width: 100vw;
 }
 
 .cover__logo {
@@ -40,7 +58,7 @@
   max-width: 102px;
 }
 
-.cover__text {
+.cover-text {
   left: 50%;
   position: absolute;
   text-align: center;
@@ -49,7 +67,7 @@
   transform: translate(-50%, -50%);
 }
 
-.cover-item__title {
+.cover-text__title {
   align-items: flex-end;
   color: #FFFFFF;
   display: flex;
@@ -62,9 +80,8 @@
   text-transform: uppercase;
 }
 
-.cover-item__text {
+.cover-text__description {
   color: #FFFFFF;
-  font-family: "Open Sans";
   font-size: 16px;
   line-height: 19px;
 
@@ -72,7 +89,6 @@
 
 .cover__scrollText {
   color: #FFFFFF;
-  font-family: "Open Sans";
   font-size: 11px;
   letter-spacing: 3.7px;
   line-height: 13px;
@@ -82,7 +98,6 @@
 /*Header block*/
 .header {
   border-bottom: 1px solid #E6E6E6;
-  width: 100%;
 }
 
 .header-wrap {
@@ -92,9 +107,7 @@
   height: 65px;
   justify-content: space-between;
   margin: auto;
-  min-width: 1440px;
-  padding-left: 250px;
-  padding-right: 250px;
+  width: 1440px;
 }
 
 .header__logo {
@@ -102,39 +115,37 @@
   width: 80px;
 }
 
-.header-nav__list {
+.header-nav {
   display: flex;
   flex-direction: row;
   list-style: none;
   text-transform: uppercase;
 }
 
-.header-list__item {
-  margin-left: 42px;
+.header-nav__item {
+  margin-left: 37px;
 }
 
-.header-link__item {
-  color: #48555B;
-  font-family: "Open Sans";
+.header-nav__item:first-child {
+  margin-left: 0;
+}
+
+.header-link {
+  color: #48555B; /*почему-то если я убираю отсюда, то глобальный цвет не применяется, хотя вроде нигде жестко цвет для линков не задан*/
   font-size: 12px;
   letter-spacing: 1px;
   line-height: 14px;
   margin: 0;
-  padding: 0;
-  text-decoration: none;
+  padding: 5px;
+  transition: color 0.5s ease-in-out;
 }
 
-.header-link__item:hover {
+.header-link:hover, .header-link:focus {
   color: #00A4E5;
 }
 
 /*Main block*/
 .main {
-  background-color:green;
-  margin: auto;
-  max-width: 1440px;
-  padding-left: 250px;
-  padding-right: 250px;
   padding-top: 55px;
 }
 
@@ -143,8 +154,6 @@
 }
 
 .story__h2 {
-  color: #48555B;
-  font-family: "Open Sans";
   font-size: 18px;
   letter-spacing: 2.30625px;
   line-height: 21px;
