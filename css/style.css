@@ -22,12 +22,12 @@
   color: #48555B;
 }
 
-.body-width {
+.screen-width {
   width: 100vw;
+  min-width: 1440px;
 }
 
 .base-width {
-  min-width: 1440px;
   width: 1440px;
   margin: auto;
   padding-left: 250px;
@@ -107,7 +107,6 @@
   height: 65px;
   justify-content: space-between;
   margin: auto;
-  width: 1440px;
 }
 
 .header__logo {
