@@ -24,6 +24,7 @@
 
 .screen-width {
   width: 100vw;
+  max-width:100%;/*без этого параметра мы имеем горизонтальный скроллбар, фикс найден на стаковерфлоу*/
   min-width: 1440px;
 }
 
@@ -39,15 +40,13 @@
   align-items: center;
   background: url("../img/coverBackground.jpg");
   background-repeat: no-repeat;
-  background-size: cover; /*contain не заливает всю высоту*/
+  background-size: cover;
   background-position: center;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
-  margin: auto;
-  /*min-width: 1440px;*/
   padding-bottom: 70px;
   padding-top: 40px;
   position: relative;
@@ -154,11 +153,12 @@
 
 .story__h2 {
   font-size: 18px;
-  letter-spacing: 2.30625px;
+  letter-spacing: 2.3px;
   line-height: 21px;
   margin: auto;
   position: relative;
   display: inline-block;
+  text-transform: uppercase;
 }
 
 .story__h2:after {
@@ -166,8 +166,82 @@
   height: 2px;
   position: absolute;
   background: #00A4E5;
-  bottom:-5px;
+  bottom:-7px;
   left: 25px;
   width: 50%;
 }
 
+.story-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  margin-top: 60px;
+  height: auto;
+
+}
+
+.story-text {
+  padding-right: 40px;
+  width: 50%;
+}
+
+.story-text__title {
+  margin-bottom: 130px; /*Если брать просто положенные 30, то как-то общее соотношениевысоты картинок и текста не совпадают, это чисто для демонстрации*/
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.2px;
+  font-weight: 600;
+
+}
+
+.story-text__description {
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: 0.2px;
+}
+
+.story-list {
+  padding-left: 40px;
+  margin-bottom: 13px;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  align-self: flex-end;
+  height: auto;
+}
+
+.story-list__item {
+  height: 240px;
+  width: 140px;
+  padding-top: 15px;
+  padding-left: 15px;
+  color: fff;
+  font-weight: 600;
+}
+
+.story-list__item:first-child {
+  margin-left: 0;
+  background: url("../img/wePlanBackground.jpg");
+}
+
+.story-list__item:nth-child(2) {
+  background: url("../img/weManageBackground.jpg");
+  margin-left: 15px;
+}
+
+.story-list__item:nth-child(3) {
+  background: url("../img/weBuildBackground.jpg");
+  margin-left: 15px;
+}
+
+.story-list__item:nth-child(n) {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
