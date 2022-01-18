@@ -8,23 +8,22 @@
 }
 
 /* open-sans-regular - latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local(''),
-  url('../fonts/open-sans-v27-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/open-sans-v27-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
+/*@font-face {*/
+/*  font-family: 'Open Sans';*/
+/*  font-style: normal;*/
+/*  font-weight: 400;*/
+/*  src: local(''),*/
+/*  url('../fonts/open-sans-v27-latin-regular.woff2') format('woff2'), !* Chrome 26+, Opera 23+, Firefox 39+ *! url('../fonts/open-sans-v27-latin-regular.woff') format('woff'); !* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ *!*/
+/*}*/
 
 /*Config block*/
 .config-text {
-  font-family: "Open Sans";
+  font-family: 'Open Sans', sans-serif;
   color: #48555B;
 }
 
 .screen-width {
-  width: 100vw;
-  max-width:100%;/*без этого параметра мы имеем горизонтальный скроллбар, фикс найден на стаковерфлоу*/
+  width: 100%;
   min-width: 1440px;
 }
 
@@ -129,13 +128,13 @@
 }
 
 .header-link {
-  color: #48555B; /*почему-то если я убираю отсюда, то глобальный цвет не применяется, хотя вроде нигде жестко цвет для линков не задан*/
+  color: #48555B;
   font-size: 12px;
   letter-spacing: 1px;
   line-height: 14px;
   margin: 0;
   padding: 5px;
-  transition: color 0.5s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .header-link:hover, .header-link:focus {
@@ -187,7 +186,7 @@
 }
 
 .story-text__title {
-  margin-bottom: 130px; /*Если брать просто положенные 30, то как-то общее соотношениевысоты картинок и текста не совпадают, это чисто для демонстрации*/
+  margin-bottom: 30px; /*Если брать просто положенные 30, то как-то общее соотношениевысоты картинок и текста не совпадают, это чисто для демонстрации*/
   font-size: 20px;
   line-height: 23px;
   letter-spacing: 0.2px;
