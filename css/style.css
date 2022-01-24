@@ -34,6 +34,16 @@
   padding-right: 250px;
 }
 
+.underline:after {
+  content: '';
+  height: 2px;
+  position: absolute;
+  background: #00A4E5;
+  bottom:-13px;
+  left: 36px;
+  width: 50px;
+}
+
 /*Cover block*/
 .cover {
   align-items: center;
@@ -146,28 +156,36 @@
   padding-top: 55px;
 }
 
+.main-button {
+  display: inline-block;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 40px;
+  color: #FFFFFF;
+  background-color: #00A4E5;
+}
+
+.main-button:hover {
+  opacity: 0.9;
+}
+
 .story {
   text-align: center;
 }
-
-.story__h2 {
+.main-h2 {
   font-size: 18px;
   letter-spacing: 2.3px;
   line-height: 21px;
-  margin: auto;
+  text-transform: uppercase;
   position: relative;
   display: inline-block;
-  text-transform: uppercase;
 }
 
-.story__h2:after {
-  content: '';
-  height: 2px;
-  position: absolute;
-  background: #00A4E5;
-  bottom:-13px;
-  left: 25px;
-  width: 55%;
+.story__h2 {
+  margin: auto;
 }
 
 .story-wrap {
@@ -245,3 +263,38 @@
   background-position: center;
 }
 
+/*Capabilities section*/
+.capabilities {
+  margin-top: 120px;
+}
+
+.capabilities-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.capabilities-wrap {
+  align-items: center;
+  column-gap: 36px;
+}
+
+.capabilities-text {
+  font-size: 11px;
+  line-height: 19px;
+  letter-spacing: 0.2px;
+}
+
+.capabilities__h2:after{
+  left: 0;
+  bottom: -6px;
+}
+
+.capabilities-item {
+  width: 295px;
+  height: 330px;
+  border: 1px solid #E6E6E6;
+  margin-top: 76px; /*логично повесить на врапер этих элементов, но тут он сделан классом, который подключает просто
+                      флекс. Отсюда вопрос, что более правильно: добавить второй класс в котором будет только марджин
+                       или оставить как у меня?*/
+}
