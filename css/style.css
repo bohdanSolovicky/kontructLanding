@@ -297,4 +297,20 @@
   margin-top: 76px; /*логично повесить на врапер этих элементов, но тут он сделан классом, который подключает просто
                       флекс. Отсюда вопрос, что более правильно: добавить второй класс в котором будет только марджин
                        или оставить как у меня?*/
+  padding: 38px 22px;
+}
+
+.capabilities-item__title {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  margin-top: 25px;
+  margin-bottom: 13px;
+  text-transform: uppercase;
+}
+
+.capabilities-item__text {
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: 0.19px;
 }
