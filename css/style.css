@@ -392,10 +392,13 @@
 }
 
 /*Footer block*/
-.footer {
+.footer-config {
+  background: #141A20;
   height: 240px; /*как на практике: блокам задается жесткая величина и потом в нее вписываются все остальные элементы
                     или все же оставляют обычно ауто и высота подстраивается под элементы?*/
-  background: #141A20;
+}
+
+.footer {
   display: flex;
   justify-content: space-between;
   padding-top: 42px;
