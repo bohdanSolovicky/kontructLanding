@@ -154,7 +154,7 @@
 }
 
 .main-button {
-  display: inline-block;
+  display: block;
   text-align: center;
   width: 150px;
   height: 40px;
@@ -163,6 +163,8 @@
   line-height: 40px;
   color: #FFFFFF;
   background-color: #00A4E5;
+  margin: auto;
+  font-weight: 600;
 }
 
 .main-button:hover {
@@ -337,13 +339,121 @@
 .background-image { /*почему-то если я єтот блок пихаю в роаздел конфига, то он не отрабатівает*/
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center; /*конкретно для случая с нижней картинкой вот этот стиль приводит к появлению
+                                внизу "границы" серой, если его убрать, то она пропадает. Я так понимаю это связанно с тем
+                                 что мы решили эту часть на весь экран, вместо обрезки. И тут вопрос как оставить*/
 }
 
+/*Newsletter section*/
 .newsletter {
   height: 100px;
   background: #171819;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 70px;
 }
 
+.newsletter-title {
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.8px;
+  color: #FFFFFF;
+}
 
+.signup-form {
+  display: flex;
+  flex-direction: row;
+  border: none;
+}
+
+.form-button {
+  border: none;
+}
+
+.form-input {
+  border: none;
+  height: 40px;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 10px 98px 10px 16px;
+  color: rgba(72, 85, 91, 0.8);
+  letter-spacing: 0.07px;
+  font-weight: 200;
+}
+
+.form-input:focus {
+  border: none;
+  outline: none;
+}
+
+/*Footer block*/
+.footer {
+  height: 240px; /*как на практике: блокам задается жесткая величина и потом в нее вписываются все остальные элементы
+                    или все же оставляют обычно ауто и высота подстраивается под элементы?*/
+  background: #141A20;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 42px;
+  padding-right: 25px;
+}
+
+.footer-title {
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.8px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.footer-company {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  width: 101px;
+  height: 23px;
+  margin-top: 19px;
+  margin-bottom: 15px;
+}
+
+.footer-description {
+  font-size: 11px;
+  line-height: 19px;
+  letter-spacing: 0.8px;
+  color: #FFFFFF;
+}
+
+.footer-links {
+  width: 262px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-contact {
+  width: 141px;
+}
+
+.footer-social {
+  width: 87px;
+}
+
+/*Copyright section*/
+.copyright {
+  background: #171819;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px; /*в данном случае нужно ли текст заворачивать в какой-то тег р, спан и
+                    тд и на него вешать стили или можно прям вот так*/
+  line-height: 13px;
+  letter-spacing: 0.8px;
+  color: #FFFFFF;
+
+}
 
